@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt update -y && apt install -y tzdata && apt -y install apache2
-ADD . /var/www/html/
+COPY . /var/www/html/
 EXPOSE 80
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
